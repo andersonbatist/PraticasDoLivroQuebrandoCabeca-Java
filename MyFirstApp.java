@@ -1,33 +1,29 @@
 public class MyFirstApp {
     
     public static void main(String [] args){
-        //Criando um objeto Dog e acessando-o
-        Dog dog1 = new Dog();
-        dog1.bark();
-        dog1.name = "Bart";
+        //Criando o Array que vai armazenar 3 referências para os objetos Books
+        Books [] myBooks = new Books [3];
+        myBooks[0] = new Books();
+        myBooks[1] = new Books();
+        myBooks[2] = new Books();
 
-        //Agora, criando um array de Dog
-        Dog [] myDogs = new Dog [3];
-
-        //Agora, inserimos alguns Dog nele
-        myDogs[0] = new Dog();
-        myDogs[1] = new Dog();
-        myDogs[2] = new Dog();
-
-        //Acessando os Dog por meio da referência do array
-        myDogs[0].name = "Fred";
-        myDogs[1].name = "Marge";
-        myDogs[2].name = "Anderson";
-
-        //Hmmm... qual é o nome do Dogs 2?
-        System.out.println("O nome do Dog escolhido é " + myDogs[2].name);
-
-        //Itera com um loop o array e instrui dogs a latir
         int x = 0;
-        while (x < myDogs.length) {
-            myDogs[x].bark();
-            x = x + 1;
+
+        //Atribuindo valores aos atributos dos objetos que foram referênciados
+        myBooks[0].tittle = "The Grapes of Java";
+        myBooks[1].tittle = "The Java Gatsby";
+        myBooks[2].tittle = "The Java Cookbook";
+
+        myBooks[0].author = "Bob";
+        myBooks[1].author = "Sue";
+        myBooks[2].author = "Ian";
+
+        //Exibir os títulos e os autores por meio de um laço While
+        while (x < myBooks.length) {
+            System.out.println("O livre " + myBooks[x].tittle + "do autor " + myBooks[x].author);
+            x ++;
         }
+     
     }
     
 }
