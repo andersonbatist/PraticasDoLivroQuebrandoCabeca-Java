@@ -2,9 +2,9 @@ public class Dog {
 
     //Criando as variáveis de instâncias
 
-    int size;
-    String breed;
-    String name;
+    public int size;
+    public String breed;
+    public String name;
 
     //Criando os métodos
 
