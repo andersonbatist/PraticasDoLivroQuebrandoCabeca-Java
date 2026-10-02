@@ -2,22 +2,31 @@ public class MyFirstApp {
     
     public static void main(String [] args){
 
-        Hobbits [] h = new Hobbits[3];
+        String [] inslands = new String [4];
+        int [] index = new int [4];
 
-        int z = 0;
+        inslands[0] = "Bermuda";
+        inslands[1] = "Fiji";
+        inslands[2] = "Azores";
+        inslands[3] = "Cozumel";
 
-        while (z < 4) {
-            h[z] = new Hobbits();
-            h[z].name = "Bilbo";
+        index[0] = 1;
+        index[1] = 3;
+        index[2]= 0;
+        index[3] = 2;
 
-            if (z == 2) {
-                h[z].name = "Sam";
-            }
+        int y = 0;
 
-            System.out.println(h[z].name + " is a good Hobbit name");
+        int ref;
+        while (y < 4) {
+            ref = index[y];
+            System.out.print("Island = ");
+            System.out.println(inslands[ref]);
 
-            z ++;
+            y = y + 1;
         }
+
+
     }
     
 }
